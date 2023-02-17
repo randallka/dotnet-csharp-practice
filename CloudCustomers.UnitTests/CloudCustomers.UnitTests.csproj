@@ -30,12 +30,14 @@
     <None Remove="FluentAssertions" />
     <None Remove="Moq" />
     <None Remove="Systems\Controllers\" />
+    <None Remove="Systems\Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Systems\" />
     <Folder Include="Helpers\" />
     <Folder Include="Fixtures\" />
     <Folder Include="Systems\Controllers\" />
+    <Folder Include="Systems\Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CloudCustomers.API\CloudCustomers.API.csproj" />

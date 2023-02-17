@@ -28,4 +28,5 @@ app.Run();
 void ConfigureServices(IServiceCollection services)
 {
     services.AddTransient<IUsersService, UserService>();
+    services.AddHttpClient<IUsersService, UserService>();
 }
