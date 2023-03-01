@@ -1,3 +1,6 @@
+using Microsoft.Extensions.DependencyInjection;
+using UsersAPI.Config;
+
 var builder = WebApplication.CreateBuilder(args);
 
 ConfigureServices(builder.Services);
@@ -27,6 +30,8 @@ app.Run();
 
 void ConfigureServices(IServiceCollection services)
 {
+    services.Configure<UsersAPIOptions>(
+        builder.Configuration.GetSection("UsersAPIOptions"));
     services.AddTransient<IUsersService, UserService>();
     services.AddHttpClient<IUsersService, UserService>();
 }
